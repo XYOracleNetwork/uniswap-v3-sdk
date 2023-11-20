@@ -4,7 +4,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "3.10.1",
+  "version": "3.12.0",
   "description": "⚒️ An SDK for building applications on top of Uniswap V3",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -23,10 +23,9 @@
     "test": "tsdx test",
     "prepublishOnly": "tsdx build",
     "deploy": "yarn deploy-patch",
-    "deploy-major": "yarn version --major && yarn deploy-common",
-    "deploy-minor": "yarn version --minor && yarn deploy-common",
-    "deploy-patch": "yarn version --patch && yarn deploy-common",
-    "deploy-common": "yarn npm publish"
+    "deploy-major": "yarn publish --major",
+    "deploy-minor": "yarn publish --minor",
+    "deploy-patch": "yarn publish --patch"
   },
   "dependencies": {
     "@uniswap/sdk-core": "^4",
