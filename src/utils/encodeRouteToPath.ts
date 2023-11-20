@@ -1,5 +1,5 @@
 import { solidityPacked } from 'ethers'
-import { Currency, Token } from '@uniswap/sdk-core'
+import { Currency, Token } from '@xyo-network/uniswap-sdk-core'
 import { Pool } from '../entities/pool'
 import { Route } from '../entities/route'
 

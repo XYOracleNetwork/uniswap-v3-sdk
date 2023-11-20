@@ -1,7 +1,7 @@
-import { BigintIsh, Token, validateAndParseAddress } from '@uniswap/sdk-core'
+import { BigintIsh, Token, validateAndParseAddress } from '@xyo-network/uniswap-sdk-core'
 import { MethodParameters, toHex } from './utils/calldata'
 import { AbiCoder, Interface } from 'ethers'
-import IUniswapV3Staker from '@uniswap/v3-staker/artifacts/contracts/UniswapV3Staker.sol/UniswapV3Staker.json'
+import IUniswapV3Staker from './IUniswapV3Staker.json'
 import { Pool } from './entities'
 import { Multicall } from './multicall'
 

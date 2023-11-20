@@ -1,7 +1,7 @@
 import { AbiCoder } from 'ethers'
 import { getCreate2Address } from 'ethers'
 import { keccak256 } from 'ethers'
-import { Token } from '@uniswap/sdk-core'
+import { Token } from '@xyo-network/uniswap-sdk-core'
 import { FeeAmount, POOL_INIT_CODE_HASH } from '../constants'
 
 /**
