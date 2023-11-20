@@ -5,7 +5,9 @@ but it is considered Alpha software and may contain bugs or change significantly
 If you have questions about how to use the SDK, please reach out in the `#dev-chat` channel of the Discord.
 Pull requests welcome!
 
-# Uniswap V3 SDK
+# This is a fork by XYLabs for XYO Network that upgrades the library to using ethers v6.
+
+# Uniswap V3 SDK (Original Readme)
 
 [![Unit Tests](https://github.com/Uniswap/uniswap-v3-sdk/workflows/Unit%20Tests/badge.svg)](https://github.com/Uniswap/uniswap-v3-sdk/actions?query=workflow%3A%22Unit+Tests%22)
 [![Lint](https://github.com/Uniswap/uniswap-v3-sdk/workflows/Lint/badge.svg)](https://github.com/Uniswap/uniswap-v3-sdk/actions?query=workflow%3ALint)

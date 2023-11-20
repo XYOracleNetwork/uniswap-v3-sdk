@@ -1,6 +1,6 @@
 import { BigintIsh, Token, validateAndParseAddress } from '@uniswap/sdk-core'
 import { MethodParameters, toHex } from './utils/calldata'
-import { defaultAbiCoder, Interface } from '@ethersproject/abi'
+import { AbiCoder, Interface } from 'ethers'
 import IUniswapV3Staker from '@uniswap/v3-staker/artifacts/contracts/UniswapV3Staker.sol/UniswapV3Staker.json'
 import { Pool } from './entities'
 import { Multicall } from './multicall'
@@ -180,9 +180,9 @@ export abstract class Staker {
         const incentiveKey = incentiveKeys[i]
         keys.push(this._encodeIncentiveKey(incentiveKey))
       }
-      data = defaultAbiCoder.encode([`${Staker.INCENTIVE_KEY_ABI}[]`], [keys])
+      data = AbiCoder.defaultAbiCoder().encode([`${Staker.INCENTIVE_KEY_ABI}[]`], [keys])
     } else {
-      data = defaultAbiCoder.encode([Staker.INCENTIVE_KEY_ABI], [this._encodeIncentiveKey(incentiveKeys[0])])
+      data = AbiCoder.defaultAbiCoder().encode([Staker.INCENTIVE_KEY_ABI], [this._encodeIncentiveKey(incentiveKeys[0])])
     }
     return data
   }
