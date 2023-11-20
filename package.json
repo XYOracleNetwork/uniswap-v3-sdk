@@ -1,10 +1,10 @@
 {
-  "name": "@uniswap/v3-sdk",
+  "name": "@xyo-network/uniswap-v3-sdk",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
-  "version": "3.10.0",
+  "version": "3.10.1",
   "description": "⚒️ An SDK for building applications on top of Uniswap V3",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -21,20 +21,24 @@
     "build": "tsdx build",
     "start": "tsdx watch",
     "test": "tsdx test",
-    "prepublishOnly": "tsdx build"
+    "prepublishOnly": "tsdx build",
+    "deploy": "yarn deploy-patch",
+    "deploy-major": "yarn version --major && yarn deploy-common",
+    "deploy-minor": "yarn version --minor && yarn deploy-common",
+    "deploy-patch": "yarn version --patch && yarn deploy-common",
+    "deploy-common": "yarn npm publish"
   },
   "dependencies": {
-    "@ethersproject/abi": "^5.0.12",
-    "@ethersproject/solidity": "^5.0.9",
     "@uniswap/sdk-core": "^4",
     "@uniswap/swap-router-contracts": "^1.2.1",
     "@uniswap/v3-periphery": "^1.1.1",
     "@uniswap/v3-staker": "1.0.0",
+    "ethers": "^6.8.1",
     "tiny-invariant": "^1.1.0",
     "tiny-warning": "^1.0.3"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.25",
+    "@types/jest": "^29.5.8",
     "@uniswap/v3-core": "1.0.0",
     "tsdx": "^0.14.1"
   },
